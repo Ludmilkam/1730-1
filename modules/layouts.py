@@ -1,14 +1,17 @@
-from modules.lists import list_HLayouts, list_all_button
+from ctypes import alignment
+from modules.lists import list_HLayouts, list_all_button, list_numButtons, list_Symbols_Button
 from PyQt5.QtWidgets import QVBoxLayout, QHBoxLayout
 from modules.labels import label
 from PyQt5.QtCore import Qt
+
 
 main_V = QVBoxLayout() #
 #
 main_V.addWidget(label, alignment = Qt.AlignRight)
 #
 for line in range(5):
-    list_HLayouts.append(QHBoxLayout())
+    objectLayouts = QHBoxLayout()
+    list_HLayouts.append(objectLayouts)
 
 def addToLayout():
     for button in list_all_button:
@@ -19,6 +22,15 @@ def addToLayout():
             #
             list_HLayouts[index].addWidget(button1)
     #
+    list_numButtons[0].setContentsMargins(4, 0, 0 ,0)
+    #
+    list_HLayouts[-1].addWidget(list_numButtons[0])
+    list_HLayouts[-1].addWidget(list_Symbols_Button[-1])
+    list_HLayouts[-1].addWidget(list_Symbols_Button[-2])
+    #
     for el in list_HLayouts:
         #
         main_V.addLayout(el)
+    #
+
+    

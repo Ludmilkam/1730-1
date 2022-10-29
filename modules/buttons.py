@@ -5,6 +5,7 @@ from modules.lists import (
         list_symbols, 
         list_all_button
     )
+from modules.settings_button import *
 #
 for button in range(10):
     list_numButtons.append(QPushButton(str(button)))
@@ -40,3 +41,11 @@ def add_buttons():
         list_button = list()
         index -= 6
 #
+# 
+for el in range(1,10):
+    resize_buttons(list_numButtons[el], 50, 50)
+
+for el in list_Symbols_Button:
+    resize_buttons(el, 50, 50)
+
+resize_buttons(list_numButtons[0], 110, 50)
