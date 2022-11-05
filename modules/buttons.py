@@ -6,6 +6,7 @@ from modules.lists import (
         list_all_button
     )
 from modules.settings_button import *
+from modules.windows import win_width, win_height
 #
 for button in range(10):
     list_numButtons.append(QPushButton(str(button)))
@@ -43,9 +44,9 @@ def add_buttons():
 #
 # 
 for el in range(1,10):
-    resize_buttons(list_numButtons[el], 50, 50)
+    resize_buttons(list_numButtons[el], win_width//4, win_width//4)
 
 for el in list_Symbols_Button:
-    resize_buttons(el, 50, 50)
+    resize_buttons(el, win_width//4, win_width//4)
 
-resize_buttons(list_numButtons[0], 110, 50)
+resize_buttons(list_numButtons[0], win_width // 2, win_width//4)

@@ -1,4 +1,6 @@
-from modules.label_functions import add_zero
-from modules.lists import list_numButtons
+from modules.lists import list_numButtons, list_num_functions,list_Symbols_Button,list_sym_functions
 
-list_numButtons[1].clicked.connect(add_zero)
+for num in range(10):
+    list_numButtons[num].clicked.connect(list_num_functions[num])
+for sym in range (3,7):
+    list_Symbols_Button[sym].clicked.connect(list_sym_functions[sym-3])

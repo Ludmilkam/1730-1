@@ -6,11 +6,14 @@ from PyQt5.QtCore import Qt
 
 
 main_V = QVBoxLayout() #
+# main_V.addStretch(0)
+main_V.setSpacing(1)
 #
 main_V.addWidget(label, alignment = Qt.AlignRight)
 #
 for line in range(5):
     objectLayouts = QHBoxLayout()
+    # objectLayouts.addStretch(1)
     list_HLayouts.append(objectLayouts)
 
 def addToLayout():
