@@ -11,7 +11,7 @@ list_all_button = list()
 #
 list_symbols = ["AC", "+/-", "%", "÷", "x", "-", "+", "=", ","]
 #
-list_arithmetics_operations = ["/", "*", "-", "+", '=']
+list_arithmetics_operations = ["/", "*", "-", "+", "+/-"]
 # 
 list_input = []
 
