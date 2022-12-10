@@ -3,8 +3,8 @@ from modules.fonts import font1
 def resize_buttons(name, width, height):
     name.setMaximumWidth(width)
     name.setMaximumHeight(height)
-width = 56
-height = 56
+width = 128
+height = 128
 def customize_buttons():
     for el in range(3, 8):
         list_Symbols_Button[el].setStyleSheet(
@@ -48,6 +48,6 @@ def customize_buttons():
         background-color: darkgrey;
         font-size: 28px;
         color: rgb(225,225,225);
-        max-width: 115px;
+        max-width: 256px;
         max-height: 56px;
     ''') 

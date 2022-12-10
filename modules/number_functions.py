@@ -12,8 +12,10 @@ def get_symbols(symbol):
     if len(number) != 16:
         if symbol not in list_arithmetics_operations:
             if symbol != "=":
-                number += str(symbol) #
-                label.setText(number) #
+                if symbol != ".":
+                    if symbol != "%":
+                        number += str(symbol) #
+                        label.setText(number) #
     if symbol in list_arithmetics_operations and number != '' and symbol != "+/-":
         list_input.append(number)
         number = ""
@@ -33,10 +35,19 @@ def get_symbols(symbol):
         label.setText(number)
         number = ""
     if symbol == "+/-":
-        number = int(number)
+        number = float(number)
         number *= -1
         number = str(number)
         label.setText(number)
+    if symbol == ".":
+        if len (number) > 0:
+            if not "." in number:
+                number += "."
+                label.setText(number) 
+        elif  number == "":
+                number += "0"
+                number += "."
+                label.setText(number) 
 
 def add_zero():
     get_symbols(0)
